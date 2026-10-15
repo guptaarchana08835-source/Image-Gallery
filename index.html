@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📸 Photo Gallery</h1>
+</header>
+
+<section class="hero">
+    <h2>Explore Beautiful Moments</h2>
+    <p>A collection of amazing photographs</p>
+</section>
+
+<div class="filters">
+    <button class="active" onclick="filterImages('all', this)">All</button>
+    <button onclick="filterImages('nature', this)">Nature</button>
+    <button onclick="filterImages('animals', this)">Animals</button>
+    <button onclick="filterImages('city', this)">City</button>
+</div>
+
+<div class="gallery">
+    <div class="image" data-category="nature"
+         onclick="openLightbox(0)">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600"
+             alt="Beautiful nature">
+        <p>Beautiful Nature</p>
+    </div>
+
+    <div class="image" data-category="animals"
+         onclick="openLightbox(1)">
+        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600"
+             alt="Golden dog">
+        <p>Lovely Animals</p>
+    </div>
+
+    <div class="image" data-category="city"
+         onclick="openLightbox(2)">
+        <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600"
+             alt="City skyline">
+        <p>City Lights</p>
+    </div>
+
+    <div class="image" data-category="nature"
+         onclick="openLightbox(3)">
+        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=600"
+             alt="Sunrise landscape">
+        <p>Sunrise</p>
+    </div>
+
+    <div class="image" data-category="animals"
+         onclick="openLightbox(4)">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600"
+             alt="Cute dog">
+        <p>Cute Puppy</p>
+    </div>
+
+    <div class="image" data-category="nature"
+         onclick="openLightbox(5)">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600"
+             alt="Green forest">
+        <p>Green Forest</p>
+    </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <button class="close" onclick="closeLightbox()">×</button>
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+
+    <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="Selected photo">
+        <p id="caption"></p>
+    </div>
+
+    <button class="next" onclick="changeImage(1)">❯</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
